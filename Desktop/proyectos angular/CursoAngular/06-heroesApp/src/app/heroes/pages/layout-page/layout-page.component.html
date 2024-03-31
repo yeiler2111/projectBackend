@@ -8,8 +8,8 @@
       </button>
 
       <span class="spacer"></span>
-
-      <button mat-button>Logout</button>
+      <span>u{{ user?.email }}</span>
+      <button (click)="redirecToLogin()" mat-button>Logout</button>
     </mat-toolbar>
     <mat-nav-list>
       <mat-list-item *ngFor="let item of sidebarItems" [routerLink]="item.url">
@@ -27,5 +27,3 @@
 
   <router-outlet></router-outlet>
 </mat-sidenav-container>
-
-
